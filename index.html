@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Highchart</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="container-fluid" style="padding-top: 2%">
+    <div class="row">
+        <div class="col-sm-2 col-md-2">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div id="container">
+
+                        <select id="mySelect" style="background-color: white; width: 100%" onchange="ws.onopen()">
+                            <option value="LT/VL/VILNIUS/O01001A">LT/VL/VILNIUS/O01001A</option>
+                            <option value="LT/KL/KLAIPEDA/O91241A">LT/KL/KLAIPEDA/O91241A</option>
+                        </select><br><br>
+                        <input type="button" id="day" class="w3-button w3-blue w3-small w3-border w3-round w3-hover-black w3-small" value="day" name="1" style="width: 94px" onclick="day(name)">
+                        <input type="button" id="week" class="w3-button w3-blue w3-small w3-border w3-round w3-hover-black w3-small" value="week" name="7"  style="width: 94px" onclick="day(name)"><br>
+                        <label for='Compare'>Compare:</label> <input type='checkbox' id='Compare' value='Compare'><br>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-sm-12 col-md-12">
+                    <div id="container1">
+                        <!--Buttons-->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-10 col-md-10">
+            <div id="container2">
+                <!--Chart-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js">
+</script>
+
+</body>
+</html>
